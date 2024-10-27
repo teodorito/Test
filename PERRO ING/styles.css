@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.game-container {
+    text-align: center;
+}
+
+#game {
+    width: 400px;
+    height: 300px;
+    background-color: #ddd;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #333;
+}
+
+#dog {
+    width: 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: grab;
+}
+
+.food {
+    position: absolute;
+    top: -50px;
+    width: 30px;
+}
+
+#confetti {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.confetti-piece {
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    background-color: rgba(255, 0, 0, 0.7);
+    animation: fall 1s linear forwards;
+}
+@keyframes fall {
+    from { transform: translateY(-100px); }
+    to { transform: translateY(300px); opacity: 0; }
+}
